@@ -5,6 +5,7 @@ import ShinyText from './ShinyText';
 import AOS from 'aos'; // Import AOS
 import 'aos/dist/aos.css';
 
+
 const Home = () => {
     useEffect(() => {
       AOS.init({ duration: 3500, easing: 'ease-in-out', once: true }); // Initialize AOS with options
@@ -24,7 +25,7 @@ const Home = () => {
       </video>
 
       <h1 className="main_heading" data-aos="fade-up" data-aos-duration="3000">
-        BEYOND GRAVITY
+        PROJECT ARES
       </h1>
       <p className="zindex main_text" data-aos="fade-in" data-aos-duration="2000" data-aos-delay="2000">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ratione consectetur deleniti sapiente ipsa repellendus facilis, eius porro ea soluta.</p>
 

@@ -1,0 +1,166 @@
+/* Footer container */
+.footer-container {
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgb(157, 157, 157);
+    background-image: url(../assets/images/footer_bg.png);
+    box-shadow: 0 -40px 10px rgba(255, 255, 255, 0.3); /* Top shadow */
+  }
+  
+  
+  /* Footer content area */
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    gap: 40px;
+  }
+  
+  /* First Column - Logo and Social Icons */
+  .footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    
+  }
+  
+  .logo-text {
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer-logo-img {
+    width: 50px;
+    margin-right: 10px;
+  }
+  
+  .footer-text {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    color: transparent;
+    background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(190, 190, 190), #7f7f7f);
+    -webkit-background-clip: text;
+    font-family: 'Orbitron', 'Poppins', sans-serif;
+    margin: 30px 0 20px 0 !important;
+  }
+  
+  /* Social icons */
+  .social-icons {
+    display: flex;
+    margin-top: 10px;
+  }
+  
+  .social-icon {
+    margin-right: 15px;
+    color: white;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    color: var(--purple1); /* Change color on hover */
+  }
+  
+  /* Second Column - Navigation Links */
+  .footer-nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .footer-nav li {
+    margin: 10px 0;
+  }
+  
+  .footer-nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s ease;
+  }
+
+  .footer-nav-heading, .footer-contact-heading{
+    font-size: 25px;
+  }
+
+  .footer-contact-heading{
+    margin-bottom: 10px;
+  }
+  
+  .footer-nav a:hover {
+    color: var(--purple1);
+  }
+
+  .footer-nav{
+    text-align: center;
+    font-family: 'Orbitron', 'Poppins', sans-serif;
+    letter-spacing: 2px;
+  }
+  
+  /* Third Column - Contact Us */
+  .footer-contact {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    text-align: left !important;
+    justify-content: center;
+    font-family: 'Orbitron', 'Poppins', sans-serif;
+    letter-spacing: 2px;
+  }
+  
+  .footer-contact p {
+    margin: 10px 0;
+    font-size: 1rem;
+    letter-spacing: 2px;
+  }
+  
+  .email-input {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 250px;
+    border: 2px solid #7f7f7f;
+    border-radius: 20px;
+    background-color: rgba(37, 37, 37, 0.449);
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-logo,
+    .footer-nav,
+    .footer-contact {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .social-icons {
+      justify-content: center;
+    }
+  
+    .footer-nav ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-nav li {
+      margin: 5px 0;
+    }
+  
+    .footer-contact p {
+      text-align: center;
+    }
+  }
+  

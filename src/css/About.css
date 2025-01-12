@@ -1,0 +1,141 @@
+/* Ensure the about container takes up the full height */
+.about-container {
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: black;
+}
+
+/* Section with image on the left and content on the right */
+.about_section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65%; 
+    padding: 30px;
+}
+
+/* Style the image on the left */
+.about_img img {
+    max-width: 100%;
+    height: 80vh;
+    font-weight: 100;
+    border-radius: 5%;
+    margin-right: 50px; /* Space between image and content */
+}
+
+/* Content area on the right */
+.about_content {
+    max-width: 60%; 
+}
+
+/* Style the heading with gradient and border */
+.abt_heading {
+    font-size: 100px;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0 !important;
+    line-height: 1.1;
+    margin-left: 30px !important;
+}
+
+/* WHO text: gradient background */
+.who {
+    color: transparent;
+    background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(169, 169, 169), #555555);
+    -webkit-background-clip: text;
+    padding: 0 5px;
+    display: inline-block;
+}
+
+/* ARE WE text: only border */
+.are-we {
+    font-size: 100px;
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke: 1px #cbcbcb;
+    padding: 0 5px;
+    display: block; /* Makes ARE WE appear on a new line */
+}
+
+/* Style for the paragraph */
+.about_content p {
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.8;
+    color: var(--white2);
+    margin-left: 30px !important;
+    letter-spacing: 2px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .about_section {
+        flex-direction: column;
+        text-align: center;
+        width: 90%;
+        margin-top: 50px;
+        background-color: black;
+    }
+
+    .about_img img {
+        height: 40vh;
+        margin-right: 0 !important;
+    }
+
+    .about_img {
+        margin-bottom: 20px;
+    }
+
+    .about_content {
+        max-width: 100%;
+    }
+
+    .abt_heading {
+        margin-left: 0 !important;
+        font-size: 60px;
+    }
+
+    .are-we {
+        font-size: 60px;
+    }
+
+    .about_content p {
+        font-size: 10px;
+        width: 100%;
+        margin-left: 0 !important;
+    }
+}
+
+/* @media (max-width: 1200px) {
+    .about_section {
+        flex-direction: column;
+        text-align: center;
+        width: 90%;
+        margin-top: 50px;
+        background-color: black;
+    }
+    .about_img img {
+        height: 50vh;
+        margin-right: 0 !important;
+    }
+
+    .about_img {
+        margin-bottom: 20px;
+    }
+    .about_content {
+        max-width: 100%;
+    }
+   .about_content p {
+        font-size: 10px;
+        width: 100%;
+        margin-left: 0 !important;
+    }
+} */
