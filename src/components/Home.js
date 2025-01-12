@@ -1,8 +1,15 @@
-import React from 'react';
+
+import React, { useEffect } from 'react';
 import "../css/Home.css"; // Your existing CSS for home page
-import ShinyText from './ShinyText'; // Import ShinyText component
+import ShinyText from './ShinyText';
+import AOS from 'aos'; // Import AOS
+import 'aos/dist/aos.css';
 
 const Home = () => {
+    useEffect(() => {
+      AOS.init({ duration: 3500, easing: 'ease-in-out', once: true }); // Initialize AOS with options
+    }, []);
+  
   return (
     <div className="home-container">
       <video
@@ -16,13 +23,13 @@ const Home = () => {
         Your browser does not support the video tag.
       </video>
 
-      <h1 className="main_heading">
+      <h1 className="main_heading" data-aos="fade-up" data-aos-duration="3000">
         BEYOND GRAVITY
       </h1>
-      <p className='zindex main_text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ratione consectetur deleniti sapiente ipsa repellendus facilis, eius porro ea soluta.</p>
+      <p className="zindex main_text" data-aos="fade-in" data-aos-duration="2000" data-aos-delay="2000">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ratione consectetur deleniti sapiente ipsa repellendus facilis, eius porro ea soluta.</p>
 
       {/* Button container with ShinyText inside */}
-      <div className="shiny-button zindex">
+      <div className="shiny-button zindex" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="3000">
         <ShinyText
           text="Know More >"
           disabled={false}

@@ -1,13 +1,6 @@
-/* Body styling */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  overflow-x: hidden; /* Prevent horizontal overflow */
-}
-
-/* Navbar styles */
+/* Navbar styling */
 .navbar {
-  position: fixed; /* Fixed at the top */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -16,8 +9,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 1000; /* Ensure navbar is on top of other content */
-  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1); /* Optional: adds shadow for visibility */
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
   box-sizing: border-box;
 }
 
@@ -71,16 +64,52 @@ body {
 
 /* Hamburger Menu Styling */
 .hamburger {
-  display: none;
+  display: flex;
   cursor: pointer;
+  position: relative;
+  width: 30px; /* Set width for proper alignment */
+  height: 30px; /* Set height for proper alignment */
+  transition: transform 0.3s ease; /* Ensure smooth transformation */
 }
 
-/* Responsive: Hide navbar links and show hamburger menu on mobile */
-@media (max-width: 1200px) {
+/* Initially both icons are stacked on top of each other */
+.hamburger .menu-icon,
+.hamburger .close-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Ensure smooth transition for transform and opacity */
+}
+
+/* Initially, only the hamburger (menu) icon is visible */
+.hamburger .menu-icon {
+  opacity: 1;
+  transform: rotate(0deg); /* No rotation */
+}
+
+.hamburger .close-icon {
+  opacity: 0;
+  transform: rotate(45deg); /* Cross icon rotated */
+}
+
+/* When the menu is open, swap visibility */
+.hamburger.active .menu-icon {
+  opacity: 0;
+  transform: rotate(-45deg); /* Rotate the hamburger icon */
+}
+
+.hamburger.active .close-icon {
+  opacity: 1;
+  transform: rotate(0deg); /* Reset the cross icon's rotation */
+}
+
+/* Show hamburger on mobile */
+@media (max-width: 768px) {
   .navbar {
     padding: 20px 20px;
   }
-
   .logo {
     position: absolute;
     left: 50%;
@@ -91,15 +120,15 @@ body {
   .nav-links {
     display: none;
     position: absolute;
-    top: 60px; /* Adjust for header size */
+    top: 60px;
     left: 0;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.983);
     flex-direction: column;
     text-align: center;
     padding: 20px 0;
-    box-sizing: border-box; /* Ensure padding doesn't cause overflow */
-    max-height: 0; /* Start with the menu hidden */
+    box-sizing: border-box;
+    max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
     gap: 0px;
@@ -107,7 +136,7 @@ body {
 
   .nav-links.open {
     display: flex;
-    max-height: 300px; /* Adjust for the height of the menu */
+    max-height: 300px;
   }
 
   .nav-links li {
@@ -119,18 +148,7 @@ body {
     font-size: 18px;
   }
 
-  /* Show hamburger on mobile */
   .hamburger {
     display: flex;
-    z-index: 1001;
-  }
-
-  .hamburger.active {
-    z-index: 1001;
-  }
-
-  /* Fix overflow issue when hamburger menu is open */
-  .hamburger.active + .nav-links {
-    max-height: 300px; /* Ensure menu opens within screen */
   }
 }
