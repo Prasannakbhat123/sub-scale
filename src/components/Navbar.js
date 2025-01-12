@@ -18,8 +18,11 @@ const Navbar = () => {
 
       {/* Hamburger menu using Lucide Icons */}
       <div className={`hamburger ${isMenuOpen ? 'active' : ''}`} onClick={toggleMenu}>
-        <Menu className="menu-icon" size={30} color="#ffffff" />
-        <X className="close-icon" size={30} color="#ffffff" />
+        {isMenuOpen ? (
+          <X size={30} color="#ffffff" /> // Cross icon when menu is open
+        ) : (
+          <Menu size={30} color="#ffffff" /> // Hamburger icon when menu is closed
+        )}
       </div>
 
       {/* Nav links */}
