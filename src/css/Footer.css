@@ -137,6 +137,10 @@
       flex-direction: column;
       align-items: center;
     }
+
+    .footer-logo-img {
+        width: 30px;
+    }
   
     .footer-logo,
     .footer-nav,
@@ -154,13 +158,37 @@
       flex-direction: column;
       align-items: center;
     }
+
+    .footer-text{
+        font-size: 35px;
+    }
   
     .footer-nav li {
       margin: 5px 0;
     }
   
-    .footer-contact p {
+    .footer-contact p, .footer-contact-heading {
       text-align: center;
+    }
+    .email-input{
+        align-items: center;
+    }
+    .footer-contact{
+        align-items: center;
+    }
+
+    .footer-nav-heading, .footer-contact-heading{
+        font-size: 20px;
+    }
+
+    .footer-contact p, .footer-nav a {
+        font-size: 15px;
+    }
+    .footer-content{
+        gap: 20px;
+    }
+    .footer-nav{
+        margin-bottom: 0;
     }
   }
   
