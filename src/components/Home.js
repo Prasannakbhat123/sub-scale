@@ -8,7 +8,7 @@ import 'aos/dist/aos.css';
 
 const Home = () => {
     useEffect(() => {
-      AOS.init({ duration: 3500, easing: 'ease-in-out', once: true }); // Initialize AOS with options
+      AOS.init({ duration: 3500, easing: 'ease-in-out', once: false }); // Initialize AOS with options
     }, []);
   
   return (
