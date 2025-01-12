@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu } from 'lucide-react'; // Import the Menu icon from lucide-react
+import { Menu, X } from 'lucide-react'; // Import both Menu and X icons
 import '../css/Navbar.css';
 
 const Navbar = () => {
@@ -18,7 +18,11 @@ const Navbar = () => {
 
       {/* Hamburger menu using Lucide Icons */}
       <div className={`hamburger ${isMenuOpen ? 'active' : ''}`} onClick={toggleMenu}>
-        <Menu size={30} color="#333" /> {/* Lucide Menu Icon */}
+        {isMenuOpen ? (
+          <X size={30} color="#ffffff" /> // Cross icon when menu is open
+        ) : (
+          <Menu size={30} color="#ffffff" /> // Hamburger icon when menu is closed
+        )}
       </div>
 
       {/* Nav links */}
@@ -30,8 +34,6 @@ const Navbar = () => {
         <li><a href="#contact">Team</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-
-    
     </nav>
   );
 };
