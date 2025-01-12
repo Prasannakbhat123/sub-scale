@@ -1,0 +1,100 @@
+/* Import Google Fonts */
+
+
+/* Container for the home section */
+.home-container {
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden; /* Prevents overflow if the video extends beyond container */
+  flex-direction: column; /* Ensures elements are stacked vertically */
+}
+
+/* Video styling to cover the background */
+.background-video {
+  position: absolute; /* Position the video behind the text */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures video covers entire container without stretching */
+  z-index: 1; /* Ensures the video stays behind the content */
+}
+
+.main_heading {
+  font-family: 'Orbitron', 'Poppins', sans-serif;
+  font-size: 100px;
+  color: transparent;
+  background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(169, 169, 169), #555555);
+  -webkit-background-clip: text;
+  background-clip: text;
+  padding: 20px;
+  padding-bottom: 0 !important;
+  margin-bottom: 2% !important;
+  text-align: center;
+  z-index: 10; /* Ensures heading is above the video */
+  position: relative;
+  top: -10vh;
+}
+
+.main_text{
+  color: rgb(208, 208, 208);
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    width: 40%;
+    position: relative;
+    margin-top: 0 !important;
+    top: -10vh;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+}
+
+/* Button container for ShinyText */
+.shiny-button {
+  display: inline-block;
+  padding: 15px 30px; /* Size of the button */
+  background-color: transparent; /* Button background color */
+  border-radius: 30px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Shadow for button effect */
+  cursor: pointer; /* Makes the button clickable */
+  text-align: center;
+  z-index: 10; /* Ensures the button appears above the video */
+  border: 3px solid #a3a3a3;
+  position: relative;
+  top: 10vh;
+  font-size: 25px;
+  font-family: 'Orbitron', 'Poppins', sans-serif;
+}
+
+/* Optional hover effect for shiny button */
+.shiny-button:hover {
+  background-color: #3636363e; /* Darkens the button on hover */
+  transform: scale(1.05); /* Slightly scales the button up on hover */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover transition */
+}
+
+/* z-index class to manage stacking context */
+.zindex {
+  z-index: 10;
+}
+  
+  /* For Mobile (max-width: 768px) */
+  @media (max-width: 768px) {
+    .main_heading {
+      font-size: 50px; /* Adjust main heading font size for mobile */
+    }
+  
+    .main_text {
+      font-size: 13px; /* Adjust font size for text on mobile */
+      line-height: 20px;
+      width: 80%; /* Adjust width */
+    }
+  
+    .shiny-button {
+      font-size: 20px; /* Adjust shiny button font size for mobile */
+    }
+  }

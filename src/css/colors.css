@@ -1,0 +1,9 @@
+/* Define default colors */
+:root {
+    --white1: #ffffff;
+    --primary1: #0a2451; /* Example primary color */
+    --secondary1: #2ecc71; /* Example secondary color */
+    --danger1: #e74c3c;
+    --purple1: #9d4edd;
+  }
+  

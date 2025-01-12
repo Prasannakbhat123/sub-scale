@@ -1,0 +1,140 @@
+/* Body styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+  }
+  
+  /* Navbar styling */
+/* Navbar styles */
+.navbar {
+  position: fixed; /* Fixed at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000; /* Ensure navbar is on top of other content */
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1); /* Optional: adds shadow for visibility */
+  box-sizing: border-box;
+}
+
+.logo_div{
+  display: flex;
+  align-items: center;
+}
+  
+  /* Logo styling */
+  .logo img {
+    width: 3.5vh;
+    height: 3.5vh !important;
+    height: auto;
+  }
+
+  .logo_text{
+    font-family: 'Orbitron', 'Poppins', sans-serif;
+    color: white;
+    padding-left: 20px;
+    font-size: 30px;
+    margin: 0 !important;
+  }
+  
+  /* Navbar links styling */
+  .nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 40px;
+  }
+  
+  /* Styling for individual nav links */
+  .nav-links li {
+    display: inline;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    transition: color 0.3s ease;
+    font-family: 'Orbitron', 'Poppins', sans-serif;
+  }
+  
+  .nav-links a:hover {
+    color: var(--purple1);
+  }
+  
+  /* Hamburger Menu Styling */
+  .hamburger {
+    display: none;
+    cursor: pointer;
+  }
+  
+  /* Responsive: Hide navbar links and show hamburger menu on mobile */
+  @media (max-width: 768px) {
+
+    .navbar{
+      padding: 20px 20px;
+    }
+    .logo {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  
+    /* Nav links for mobile */
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 60px; /* Adjust for header size */
+      left: 0;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.983);
+      flex-direction: column;
+      text-align: center;
+      padding: 20px 0;
+      box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+      max-height: 0; /* Start with the menu hidden */
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+      gap: 0px;
+    }
+  
+    .nav-links.open {
+      display: flex;
+      max-height: 300px; /* Adjust for the height of the menu */
+    }
+  
+    .nav-links li {
+      margin: 10px 0;
+    }
+  
+    .nav-links a {
+      color: #333;
+      font-size: 18px;
+    }
+  
+    /* Show hamburger on mobile */
+    .hamburger {
+      display: flex;
+    }
+  
+    /* Fix overflow issue when hamburger menu is open */
+    .hamburger.active + .nav-links {
+      max-height: 300px; /* Ensure menu opens within screen */
+    }
+  }
+  
+  /* Add padding to the body to account for the fixed navbar */
+  body {
+    padding-top: 60px; /* Ensure content doesn't go behind the navbar */
+  }
+
+
+  
