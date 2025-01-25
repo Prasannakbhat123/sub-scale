@@ -68,7 +68,7 @@ body {
   }
   
   .nav-links a:hover {
-    color: var(--purple1);
+    color: var(--primary1);
   }
   
   /* Hamburger Menu Styling */

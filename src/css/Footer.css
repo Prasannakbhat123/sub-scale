@@ -65,7 +65,7 @@
   }
   
   .social-icon:hover {
-    color: var(--purple1); /* Change color on hover */
+    color: var(--primary1); /* Change color on hover */
   }
   
   /* Second Column - Navigation Links */
@@ -94,7 +94,7 @@
   }
   
   .footer-nav a:hover {
-    color: var(--purple1);
+    color: var(--primary1);
   }
 
   .footer-nav{

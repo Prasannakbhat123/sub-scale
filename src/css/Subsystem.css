@@ -303,3 +303,23 @@
         display: none;
     }
 }
+
+.subs_image_container {
+    transition: opacity 1s ease-in-out;
+    position: relative;
+  }
+  
+  .subs_image {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  /* Hide all images except the current one */
+  .subs_image-container.fade-out .subs_image {
+    opacity: 0;
+  }
+  
+  .subs_image-container.fade-in .subs_image {
+    opacity: 1;
+  }
+  
