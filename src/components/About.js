@@ -1,19 +1,7 @@
-import React, { useEffect } from "react";
-import AOS from "aos"; // Import AOS
-import "aos/dist/aos.css"; // Import AOS styles
-import "../css/About.css";
+import React from "react";
+import "../css/About.css"; // Your existing CSS for About page
 
 const About = () => {
-  useEffect(() => {
-    // Initialize AOS with once: false to repeat animation on each scroll into view
-    AOS.init({
-      duration: 2000, // Animation duration
-      easing: 'ease-in-out', // Easing function
-      once: false, // Allows animation to trigger every time the section comes into view
-      delay: 100, 
-    });
-  }, []);
-
   return (
     <div className="about-container">
       <div className="about_section">

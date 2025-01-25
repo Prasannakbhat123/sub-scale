@@ -30,7 +30,7 @@ body {
   
   /* Logo styling */
   .logo img {
-    width: 5vh;
+    width: auto;
     height: 5vh !important;
     height: auto;
   }

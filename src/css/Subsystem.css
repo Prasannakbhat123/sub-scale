@@ -1,0 +1,305 @@
+.container {
+    min-height: 100vh;
+    width: 100vw;
+    background-image: url('../assets/images/bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 300px;
+}
+
+.glass-box {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.051);
+    border-radius: 20px;
+    padding: 20px;
+    padding-top: 0px !important;
+    width: 85%;
+    max-width: 1200px;
+    height: auto;
+    min-height: 90vh;
+    backdrop-filter: blur(5px);
+    border: 2px solid #ffff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    overflow: auto;
+    max-height: 90vh;
+    overflow: visible;
+}
+
+.logo-top-right {
+    position: absolute;
+    top: -25px;  
+    left: 5%; 
+    z-index: 10;  
+    background: #010101;
+    padding: 5px;
+  }
+  
+  .logo-top-right-img {
+    width: 100px; 
+    height: auto; 
+    object-fit: contain;
+  }
+
+  .logo-bottom{
+    position: absolute;
+    top: 45%;
+    right: -3%;
+    transform: rotate(90deg);
+  }
+
+  .logo-bottom-img{
+    width: 80px; 
+    height: auto; 
+    object-fit: contain;
+  }
+
+  .slanted-text {
+    position: absolute;
+    right: 10px; 
+    top: 40%; 
+    transform: rotate(90deg); 
+    transform-origin: right top; 
+    font-size: 14px; 
+    color: white; 
+    white-space: nowrap;
+    font-family: 'Orbitron','Poppins', sans-serif;
+  }
+
+  .right-slanted-text{
+    position: absolute;
+    left: -3%; 
+    top: 33%; 
+    transform: rotate(-90deg); 
+    transform-origin: right top; 
+    font-size: 14px; 
+    color: white; 
+    white-space: nowrap;
+    font-family: 'Orbitron','Poppins', sans-serif;
+  }
+
+  .line-left {
+    position: absolute;
+    left: -5px; 
+    top: 30%; 
+    transform: rotate(90deg); 
+    transform-origin: right top; 
+    font-size: 30px; 
+    color: white; 
+    white-space: nowrap;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    padding: 0 10px ; 
+    background: #010101; 
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5); 
+    border-radius: 5px;
+  }
+
+  .line-left-bottom{
+    position: absolute;
+    left: -5px; 
+    top: 50%; 
+    transform: rotate(90deg); 
+    transform-origin: right top; 
+    font-size: 30px; 
+    color: white; 
+    white-space: nowrap;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    padding: 0 10px ; 
+    background: #010101; 
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5); 
+    border-radius: 5px;
+  }
+  
+
+.subsys_main_heading {
+    font-size: 100px;
+    font-family: 'Orbitron','Poppins', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1.1;
+    text-align: center;
+    color: transparent;
+    background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(169, 169, 169), #555555);
+    -webkit-background-clip: text;
+    padding: 0 5px;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+}
+
+.description {
+    font-size: 1rem;
+    color: white;
+    margin-top: 10px;
+}
+
+.subs_image_container {
+    position: relative;
+    max-width: 80%;
+    margin-bottom: 20px;
+}
+
+.subs_image {
+    height: 450px;
+    width: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.bottom-left-content {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    text-align: left;
+}
+
+.bottom-left-title {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    font-family: 'Orbitron','Poppins', sans-serif;
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke: 1px #cbcbcb;
+    margin-bottom: 0 !important;
+}
+
+.bottom-left-subtitle {
+    font-size: 20px;
+    color: white;
+    margin-top: 5px;
+    font-family: 'Orbitron','Poppins', sans-serif;
+    max-width: 75%;
+    font-weight: 100;
+    margin-bottom: 30px;
+}
+
+.slider-arrows {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    margin-top: 15px;  
+}
+
+.arrow {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.arrow:hover {
+    transform: scale(1.1);  
+}
+
+.bottom-right-box {
+    position: absolute;
+    bottom: -15%;
+    right: 15%;
+    background: rgba(255, 255, 255, 0.298);
+    border-radius: 15px;
+    padding: 15px;
+    width: 30vw;
+    backdrop-filter: blur(8px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    z-index: 3;
+}
+
+.bottom-right-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    font-family: 'Orbitron','Poppins', sans-serif;
+    margin: 0 !important;
+    margin-bottom: 20px !important;
+}
+
+.bottom-right-description {
+    font-size: 14px;
+    color: white;
+    margin-top: 10px;
+    font-family: 'Orbitron','Poppins', sans-serif;
+}
+
+@media (max-width: 768px) {
+    .glass-box {
+        width: 80%;
+    }
+
+    .subsys_main_heading {
+        font-size: 40px;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .description {
+        font-size: 0.9rem;
+    }
+
+    .bottom-right-title {
+        font-size: 1.2rem;
+    }
+
+    .bottom-left-subtitle{
+        max-width: 90%;
+    }
+
+    .bottom-left-content{
+        text-align: center;
+    }
+
+    .slider-arrows{
+        justify-content: center;
+    }
+
+    .bottom-right-description {
+        font-size: 0.9rem;
+        font-family: 'Poppins', sans-serif !important;
+    }
+
+    .subs_image_container {
+        max-width: 100%;
+    }
+
+    .subs_image {
+        height: 300px;
+        width: auto;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+    .bottom-right-box {
+        position: absolute;
+        bottom: -20%;
+        right: 11%;
+        background: rgba(255, 255, 255, 0.298);
+        border-radius: 15px;
+        /* padding: 15px; */
+        backdrop-filter: blur(8px);
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        text-align: center;
+        z-index: 3;
+        width: 70%;
+    }
+
+    .right-slanted-text, .logo-bottom{
+        display: none;
+    }
+}
