@@ -3,6 +3,14 @@ import "../css/Home.css"; // Your existing CSS for home page
 import ShinyText from './ShinyText';
 import About from './About';
 import Subsystem from './Subsystem';
+import LogoWall from "./LogoWall";
+const logoImgs = [
+    { imgUrl: 'assets/images/logo1.webp', altText: "React Bits Logo" },
+    { imgUrl: 'assets/images/logo2.webp', altText: "React Bits Logo" },
+    { imgUrl: 'assets/images/logo3.png', altText: "React Bits Logo" },
+    { imgUrl: 'assets/images/logo4.png', altText: "React Bits Logo" },
+    { imgUrl: 'assets/images/logo5.webp', altText: "React Bits Logo" },
+  ];
 
 const Home = () => {
   return (
@@ -57,6 +65,18 @@ const Home = () => {
       {/* Rendering About and Subsystem Components */}
       <About />
       <Subsystem />
+      <div style={{height: '200px', width: '100%', position: 'relative', paddingBottom: '50px'}}>
+      <h2 className="sponsors_head">Our Sponsors</h2>
+  <LogoWall
+    items={logoImgs}
+    direction='horizontal'
+    pauseOnHover={true}
+    size='clamp(8rem, 1rem + 20vmin, 25rem)'
+    duration='60s'
+    bgColor='#060606'
+    bgAccentColor='#111111'
+  />  
+</div>
     </>
   );
 };

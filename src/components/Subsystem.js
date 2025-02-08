@@ -41,23 +41,34 @@ const Subsystem = () => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [fadeClass, setFadeClass] = useState('fade-in');
+  const [intervalId, setIntervalId] = useState(null); // To keep track of interval
 
+  // Function to go to the next slide
   const nextSlide = () => {
     setFadeClass('fade-out'); // Fade out the current slide
 
     setTimeout(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % data.length);
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % data.length); // Update index
       setFadeClass('fade-in'); // Fade in the new slide
-    }, 1000); // Wait for the fade-out transition to finish before updating the index
+    }, 1000); // Wait for the fade-out to finish
   };
 
+  // Function to go to the previous slide
   const prevSlide = () => {
     setFadeClass('fade-out'); // Fade out the current slide
 
     setTimeout(() => {
-      setCurrentIndex((prevIndex) => (prevIndex - 1 + data.length) % data.length);
+      setCurrentIndex((prevIndex) => (prevIndex - 1 + data.length) % data.length); // Update index
       setFadeClass('fade-in'); // Fade in the new slide
-    }, 1000); // Wait for the fade-out transition to finish before updating the index
+    }, 1000); // Wait for the fade-out to finish
+  };
+
+  // Reset the auto slide interval whenever the user interacts
+  const resetAutoSlideInterval = () => {
+    if (intervalId) clearInterval(intervalId); // Clear the previous interval
+
+    const newIntervalId = setInterval(nextSlide, 10000); // Set a new interval to change slide every 6 seconds
+    setIntervalId(newIntervalId); // Store the new interval ID
   };
 
   // Initialize AOS on component mount
@@ -67,20 +78,22 @@ const Subsystem = () => {
       easing: 'ease-in-out', // Easing function
       once: false, // Allows animation to trigger every time the section comes into view
     });
+
+    // Start the auto slide interval when the component mounts
+    const initialIntervalId = setInterval(nextSlide, 10000);
+    setIntervalId(initialIntervalId); // Store the interval ID
+
+    return () => clearInterval(initialIntervalId); // Clean up the interval when the component unmounts
   }, []);
 
-  // Auto slide change every 5 seconds
+  // Auto slide change after 6 seconds if the user doesn't interact
   useEffect(() => {
-    const intervalId = setInterval(() => {
-      nextSlide();  // Call nextSlide every 5 seconds
-    }, 5000);
-
-    // Clean up interval on component unmount
-    return () => clearInterval(intervalId);
-  }, []);  // The empty dependency array ensures this effect runs only once on mount
+    // Whenever the currentIndex changes, we reset the interval to restart the 6 seconds countdown
+    resetAutoSlideInterval();
+  }, [currentIndex]);
 
   return (
-    <div className="container">
+    <div className="container" id='subsystem'>
       <h2 className="subsys_main_heading" data-aos="fade-up">SUBSYSTEMS</h2>
 
       <div className="glass-box">
@@ -106,7 +119,7 @@ const Subsystem = () => {
               height="32"
               fill="white"
               viewBox="0 0 24 24"
-              onClick={prevSlide}
+              onClick={() => { prevSlide(); resetAutoSlideInterval(); }}
               data-aos="fade-up"
               data-aos-delay="1000"
             >
@@ -125,7 +138,7 @@ const Subsystem = () => {
               height="32"
               fill="white"
               viewBox="0 0 24 24"
-              onClick={nextSlide}
+              onClick={() => { nextSlide(); resetAutoSlideInterval(); }}
               data-aos="fade-up"
               data-aos-delay="1000"
             >

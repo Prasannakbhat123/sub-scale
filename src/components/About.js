@@ -3,7 +3,7 @@ import "../css/About.css"; // Your existing CSS for About page
 
 const About = () => {
   return (
-    <div className="about-container">
+    <div className="about-container" id="about">
       <div className="about_section">
         <div className="about_img" data-aos="fade-right">
           <img src="assets/images/about_img.jpg" alt="about-img" />

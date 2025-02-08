@@ -10,6 +10,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';  // I
 import AOS from 'aos'; // Import AOS
 import 'aos/dist/aos.css'; // Import AOS styles
 import React from 'react';
+import Ares from './components/Ares';
+import Contact from './components/Contact';
 
 function App() {
   // Initialize AOS on component mount
@@ -34,6 +36,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />   
           <Route path="/team" element={<OurTeam />} />  
+          <Route path="/ares" element={<Ares />} />  
+          <Route path="/contact" element={<Contact />} />  
         </Routes>
         <Footer />
       </div>

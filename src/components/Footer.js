@@ -1,5 +1,6 @@
 import React from 'react';
 import '../css/Footer.css';
+import { Link } from 'react-router-dom'; 
 
 const Footer = () => {
   return (
@@ -40,10 +41,12 @@ const Footer = () => {
         <div className="footer-nav">
             <h3 className='footer-nav-heading'>Links</h3>
           <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
+          <li><Link to="/">Home</Link></li>
+        <li><a href="/#about">About</a></li>
+        <li><Link to="/ares">Ares</Link></li>
+        <li><a href="#subsystem">Subsystem</a></li>
+        <li><Link to="/team">Team</Link></li>
+        <li><Link to="/contact">Contact</Link></li>
           </ul>
         </div>
         {/* Third Column: Contact Us and Email Input */}
