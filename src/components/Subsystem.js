@@ -50,7 +50,7 @@ const Subsystem = () => {
     setTimeout(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % data.length); // Update index
       setFadeClass('fade-in'); // Fade in the new slide
-    }, 1000); // Wait for the fade-out to finish
+    }, 500); // Wait for the fade-out to finish
   };
 
   // Function to go to the previous slide
@@ -60,14 +60,14 @@ const Subsystem = () => {
     setTimeout(() => {
       setCurrentIndex((prevIndex) => (prevIndex - 1 + data.length) % data.length); // Update index
       setFadeClass('fade-in'); // Fade in the new slide
-    }, 1000); // Wait for the fade-out to finish
+    }, 500); // Wait for the fade-out to finish
   };
 
   // Reset the auto slide interval whenever the user interacts
   const resetAutoSlideInterval = () => {
     if (intervalId) clearInterval(intervalId); // Clear the previous interval
 
-    const newIntervalId = setInterval(nextSlide, 10000); // Set a new interval to change slide every 6 seconds
+    const newIntervalId = setInterval(nextSlide, 10000); // Set a new interval to change slide every 10 seconds
     setIntervalId(newIntervalId); // Store the new interval ID
   };
 
@@ -86,9 +86,9 @@ const Subsystem = () => {
     return () => clearInterval(initialIntervalId); // Clean up the interval when the component unmounts
   }, []);
 
-  // Auto slide change after 6 seconds if the user doesn't interact
+  // Auto slide change after 10 seconds if the user doesn't interact
   useEffect(() => {
-    // Whenever the currentIndex changes, we reset the interval to restart the 6 seconds countdown
+    // Whenever the currentIndex changes, we reset the interval to restart the 10 seconds countdown
     resetAutoSlideInterval();
   }, [currentIndex]);
 

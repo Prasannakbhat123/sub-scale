@@ -9,7 +9,7 @@ const Footer = () => {
         {/* First Column: Logo and Text */}
         <div className="footer-logo">
           <div className="logo-text">
-            <img src="assets/images/logo.png" alt="Logo" className="footer-logo-img" />
+            <img src="assets/images/footer_logo.png" alt="Logo" className="footer-logo-img" />
             <p className="footer-text">Project Ares</p>
           </div>
 

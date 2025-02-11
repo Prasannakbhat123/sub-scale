@@ -26,6 +26,7 @@ body {
 .logo_div{
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
   
   /* Logo styling */
