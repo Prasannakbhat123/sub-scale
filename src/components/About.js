@@ -6,7 +6,7 @@ const About = () => {
     <div className="about-container" id="about">
       <div className="about_section">
         <div className="about_img" data-aos="fade-right">
-          <img src="assets/images/about_img.jpg" alt="about-img" />
+          <img src="assets/images/rocket.jpg" alt="about-img" />
         </div>
         <div className="about_content" data-aos="fade-left">
           <h2 className="abt_heading">

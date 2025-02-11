@@ -1,19 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../css/Ares.css";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import ShinyText from './ShinyText';
 import { Link } from 'react-router-dom';
 import SpotlightCard from './SpotlightCard';  // Import the SpotlightCard component
 import LogoWall from "./LogoWall";
 import Gallery from "./Gallery";
+
 const logoImgs = [
-    { imgUrl: 'assets/images/logo1.webp', altText: "React Bits Logo" },
-    { imgUrl: 'assets/images/logo2.webp', altText: "React Bits Logo" },
-    { imgUrl: 'assets/images/logo3.png', altText: "React Bits Logo" },
-    { imgUrl: 'assets/images/logo4.png', altText: "React Bits Logo" },
-    { imgUrl: 'assets/images/logo5.webp', altText: "React Bits Logo" },
-  ];
+  { imgUrl: 'assets/images/logo1.webp', altText: "Sponsor Logo" },
+  { imgUrl: 'assets/images/logo2.webp', altText: "Sponsor Logo" },
+  { imgUrl: 'assets/images/logo3.png', altText: "Sponsor Logo" },
+  { imgUrl: 'assets/images/logo4.png', altText: "Sponsor Logo" },
+  { imgUrl: 'assets/images/logo5.webp', altText: "Sponsor Logo" },
+  { imgUrl: 'assets/images/vega.png', altText: "Sponsor Logo" },
+];
 
 const Ares = () => {
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
+
   // Array of cards with different data
   const cardData = [
     {
@@ -29,7 +37,7 @@ const Ares = () => {
 
   return (
     <>
-      <div className="details-container">
+      <div className="details-container" data-aos="fade-up">
         <div className="details-image-container">
           <img src={cardData[0].image} alt="Card" className="details-image" />
         </div>
@@ -52,27 +60,26 @@ const Ares = () => {
             </tbody>
           </table>
           <div className="btn_cont">
-          <div className="shiny-button zindex">
-            <Link to="/team">
-              <ShinyText text="Team Details >" disabled={false} speed={3} className="custom-class" />
-            </Link>
+            <div className="shiny-button zindex">
+              <Link to="/team">
+                <ShinyText text="Team Details >" disabled={false} speed={3} className="custom-class" />
+              </Link>
+            </div>
           </div>
-          </div>
-        
         </div>
       </div>
 
       {/* Multiple spotlight cards with alternating image positions */}
       <div className="cards-container">
         {cardData.map((card, index) => (
-          <SpotlightCard spotlightColor="rgba(3, 71, 166, 0.22)" key={card.heading}>
+          <SpotlightCard spotlightColor="rgba(3, 71, 166, 0.22)" key={card.heading} data-aos="fade-up">
             <div className={`spotlight-content ${index % 2 === 0 ? "left-image" : "right-image"}`}>
               <div className="spotlight-text">
-                <h3 className="card_head">Project Ares</h3>
-                <p className="card_para">
+                <h3 className="card_head" data-aos="fade-up">Project Ares</h3>
+                <p className="card_para" data-aos="fade-in" data-aos-delay="500">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis ipsam minima nemo nulla dolorum rem, voluptatum voluptate tenetur, esse nisi explicabo aliquid magnam. Similique labore natus facere repellendus veniam voluptas expedita fugit, ullam ratione eos explicabo quasi maiores animi neque eveniet molestias incidunt eaque ipsum omnis, ipsam, magnam necessitatibus exercitationem. Quas quibusdam, dolores accusantium dolor neque enim vero mollitia asperiores ea esse iste quos nostrum tempore atque, accusamus explicabo dignissimos error blanditiis reiciendis fugit nesciunt molestiae eius pariatur iusto! Quod minus aliquam necessitatibus dolorem. Atque laboriosam, nobis dignissimos quaerat iste quia dolor nemo quibusdam officia porro ratione tenetur fugit voluptates.
                 </p>
-                <p className="card_para">
+                <p className="card_para" data-aos="fade-in" data-aos-delay="500">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis ipsam minima nemo nulla dolorum rem, voluptatum voluptate tenetur, esse nisi explicabo aliquid magnam. Similique labore natus facere repellendus veniam voluptas expedita fugit, ullam ratione eos explicabo quasi maiores animi neque eveniet molestias incidunt eaque ipsum omnis, ipsam, magnam necessitatibus exercitationem
                 </p>
               </div>
@@ -80,20 +87,19 @@ const Ares = () => {
           </SpotlightCard>
         ))}
       </div>
-      <Gallery/>
-      <div style={{height: '200px', width: '100%', position: 'relative', marginTop: '50px', paddingBottom: '50px'}}>
-      <h2 className="sponsors_head">Our Sponsors</h2>
-  <LogoWall
-    items={logoImgs}
-    direction='horizontal'
-    pauseOnHover={true}
-    size='clamp(8rem, 1rem + 20vmin, 25rem)'
-    duration='60s'
-    bgColor='#060606'
-    bgAccentColor='#111111'
-  />  
-</div>
-
+      <Gallery />
+      <div style={{ height: '200px', width: '100%', position: 'relative', marginTop: '50px', paddingBottom: '50px' }}>
+        <h2 className="sponsors_head" data-aos="fade-up">Our Sponsors</h2>
+        <LogoWall
+          items={logoImgs}
+          direction='horizontal'
+          pauseOnHover={true}
+          size='clamp(8rem, 1rem + 20vmin, 25rem)'
+          duration='60s'
+          bgColor='#060606'
+          bgAccentColor='#111111'
+        />
+      </div>
     </>
   );
 };
