@@ -9,11 +9,16 @@ import LogoWall from "./LogoWall";
 import Gallery from "./Gallery";
 
 const logoImgs = [
-  { imgUrl: 'assets/images/logo1.webp', altText: "Sponsor Logo" },
-  { imgUrl: 'assets/images/logo2.webp', altText: "Sponsor Logo" },
-  { imgUrl: 'assets/images/logo3.png', altText: "Sponsor Logo" },
-  { imgUrl: 'assets/images/logo4.png', altText: "Sponsor Logo" },
-  { imgUrl: 'assets/images/logo5.webp', altText: "Sponsor Logo" },
+  // { imgUrl: 'assets/images/logo1.webp', altText: "Sponsor Logo" },
+  // { imgUrl: 'assets/images/logo2.webp', altText: "Sponsor Logo" },
+  // { imgUrl: 'assets/images/logo3.png', altText: "Sponsor Logo" },
+  // { imgUrl: 'assets/images/logo4.png', altText: "Sponsor Logo" },
+  // { imgUrl: 'assets/images/logo5.webp', altText: "Sponsor Logo" },
+  { imgUrl: 'assets/images/vega.png', altText: "Sponsor Logo" },
+  { imgUrl: 'assets/images/vega.png', altText: "Sponsor Logo" },
+  { imgUrl: 'assets/images/vega.png', altText: "Sponsor Logo" },
+  { imgUrl: 'assets/images/vega.png', altText: "Sponsor Logo" },
+  { imgUrl: 'assets/images/vega.png', altText: "Sponsor Logo" },
   { imgUrl: 'assets/images/vega.png', altText: "Sponsor Logo" },
 ];
 
@@ -77,11 +82,13 @@ const Ares = () => {
               <div className="spotlight-text">
                 <h3 className="card_head" data-aos="fade-up">Project Ares</h3>
                 <p className="card_para" data-aos="fade-in" data-aos-delay="500">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis ipsam minima nemo nulla dolorum rem, voluptatum voluptate tenetur, esse nisi explicabo aliquid magnam. Similique labore natus facere repellendus veniam voluptas expedita fugit, ullam ratione eos explicabo quasi maiores animi neque eveniet molestias incidunt eaque ipsum omnis, ipsam, magnam necessitatibus exercitationem. Quas quibusdam, dolores accusantium dolor neque enim vero mollitia asperiores ea esse iste quos nostrum tempore atque, accusamus explicabo dignissimos error blanditiis reiciendis fugit nesciunt molestiae eius pariatur iusto! Quod minus aliquam necessitatibus dolorem. Atque laboriosam, nobis dignissimos quaerat iste quia dolor nemo quibusdam officia porro ratione tenetur fugit voluptates.
-                </p>
-                <p className="card_para" data-aos="fade-in" data-aos-delay="500">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis ipsam minima nemo nulla dolorum rem, voluptatum voluptate tenetur, esse nisi explicabo aliquid magnam. Similique labore natus facere repellendus veniam voluptas expedita fugit, ullam ratione eos explicabo quasi maiores animi neque eveniet molestias incidunt eaque ipsum omnis, ipsam, magnam necessitatibus exercitationem
-                </p>
+  Project ARES is an ambitious endeavor focused on the development of a high-performance sounding rocket. It integrates various subsystems, including payload deployment, propulsion, avionics, and structural integrity. The team is exploring innovative technologies like stereo vision for object detection, alongside testing advanced rocket motors, building a reliable flight computer, and ensuring the strength and durability of the airframe. By combining engineering precision with cutting-edge solutions, Project ARES strives to push the limits of aerospace exploration and mission success, creating new possibilities for future space endeavors.
+</p>
+
+<p className="card_para" data-aos="fade-in" data-aos-delay="500">
+  The propulsion subsystem is dedicated to testing and characterizing various propellant types, alongside the development of high-performance rocket motors. The avionics team is focused on processing sensor data, detecting apogee, and ensuring precise parachute deployment during flight. Meanwhile, the structures team is responsible for designing, analyzing, and manufacturing the rocket's airframe, ensuring its integrity through a combination of structural simulations and hands-on fabrication. Together, these efforts aim to create a reliable and efficient launch vehicle capable of achieving mission goals with precision and safety.
+</p>
+
               </div>
             </div>
           </SpotlightCard>

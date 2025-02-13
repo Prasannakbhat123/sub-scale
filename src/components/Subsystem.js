@@ -8,33 +8,33 @@ const Subsystem = () => {
     {
       image: 'assets/images/payload.png',
       title: 'Payload',
-      subtitle: 'This is the subheading for the first image.',
-      bottomRightTitle: 'Additional Info 1',
-      bottomRightDescription: 'This is additional info related to the first image. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis perspiciatis eligendi praesentium quis consequuntur tempora cumque a eius vero voluptatibus.',
+      subtitle: 'Exploring Stereo Vision for Object Detection',
+      bottomRightTitle: 'Stereo Vision',
+      bottomRightDescription: 'This project aims to explore the feasibility of using stereo vision as an alternative to LiDAR for object detection in a dynamic environment, such as those experienced during the flight of a sounding rocket. The experiment will involve mounting a stereo vision system on a spinning platform inside the CanSat. The computation system will create a depth map from which the raspberry Pi AI kit will perform object detection of certain objects dangled from the top plate of the CanSat.',
       rightText: 'Payload'
     },
     {
       image: 'assets/images/Propulsion.png',
-      title: 'Aerodynamics',
-      subtitle: 'This is the subheading for the second image.',
-      bottomRightTitle: 'Additional Info 2',
-      bottomRightDescription: 'This is additional info related to the second image. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis perspiciatis eligendi praesentium quis consequuntur tempora cumque a eius vero voluptatibus.',
-      rightText: 'Aero'
+      title: 'Propulsion',
+      subtitle: 'Rocket Motor Development and Testing',
+      bottomRightTitle: 'Propellant Characterization',
+      bottomRightDescription: 'The propulsion subsystem is responsible for making the rocket motor that will propel our rockets. Our work includes characterization of different propellant formations, simulating our prototypes and conducting static fires of our motors.',
+      rightText: 'Propulsion'
     },
     {
       image: 'assets/images/Avionics.png',
       title: 'Avionics',
-      subtitle: 'This is the subheading for the third image.',
-      bottomRightTitle: 'Additional Info 3',
-      bottomRightDescription: 'This is additional info related to the third image. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis perspiciatis eligendi praesentium quis consequuntur tempora cumque a eius vero voluptatibus.',
+      subtitle: 'Building the Flight Computer',
+      bottomRightTitle: 'Sensor Data Processing',
+      bottomRightDescription: 'The avionics subsystem works on building the flight computer on the sounding rocket. It works on getting data from various sensors and processing and analysing it to detect apogee of the rocket and trigger parachute deployment. Apart from this we are working on implementing control systems through airbrakes, and live data telemetry.',
       rightText: 'Avionics'
     },
     {
       image: 'assets/images/Structures.png',
       title: 'Structures',
-      subtitle: 'This is the subheading for the third image.',
-      bottomRightTitle: 'Additional Info 3',
-      bottomRightDescription: 'This is additional info related to the third image. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis perspiciatis eligendi praesentium quis consequuntur tempora cumque a eius vero voluptatibus.',
+      subtitle: 'Designing and Manufacturing the Airframe',
+      bottomRightTitle: 'Structural Integrity Analysis',
+      bottomRightDescription: 'The Structures subsystem is responsible for designing, analyzing, and manufacturing the entire airframe of the rocket. We conduct simulations on critical components like bulkheads to ensure structural integrity and performance. With a hands-on approach, we fabricate all structural parts, combining engineering precision with practical craftsmanship to build a reliable and efficient launch vehicle.',
       rightText: 'Structures'
     },
   ];
@@ -152,7 +152,7 @@ const Subsystem = () => {
         </div>
 
         <div className="slanted-text">
-          Project Ares&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;ThrustMIT
+          Project Ares&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Team Ares
         </div>
 
         <div className="logo-bottom" data-aos="fade-up" data-aos-delay="2000">

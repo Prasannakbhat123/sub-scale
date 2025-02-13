@@ -13,10 +13,7 @@ const About = () => {
             <span className="who">WHO</span> <span className="are-we">ARE WE</span>
           </h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis
-            mollitia nam, rem similique cum ipsum itaque voluptate! Laboriosam,
-            quidem voluptas? Ab labore quas expedita ratione, ex deleniti!
-            Consectetur, nostrum fuga. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, commodi?
+          Project ARES is focused on developing a high-performance sounding rocket. The propulsion team tests propellants and advances rocket motor technology, while avionics processes sensor data for apogee detection and parachute deployment. The structures team designs and builds the airframe, ensuring its integrity. Combining innovation and engineering, Project ARES aims to push the boundaries of aerospace exploration.
           </p>
         </div>
       </div>

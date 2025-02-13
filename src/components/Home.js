@@ -5,11 +5,16 @@ import About from './About';
 import Subsystem from './Subsystem';
 import LogoWall from "./LogoWall";
 const logoImgs = [
-    { imgUrl: 'assets/images/logo1.webp', altText: "React Bits Logo" },
-    { imgUrl: 'assets/images/logo2.webp', altText: "React Bits Logo" },
-    { imgUrl: 'assets/images/logo3.png', altText: "React Bits Logo" },
-    { imgUrl: 'assets/images/logo4.png', altText: "React Bits Logo" },
-    { imgUrl: 'assets/images/logo5.webp', altText: "React Bits Logo" },
+    // { imgUrl: 'assets/images/logo1.webp', altText: "React Bits Logo" },
+    // { imgUrl: 'assets/images/logo2.webp', altText: "React Bits Logo" },
+    // { imgUrl: 'assets/images/logo3.png', altText: "React Bits Logo" },
+    // { imgUrl: 'assets/images/logo4.png', altText: "React Bits Logo" },
+    // { imgUrl: 'assets/images/logo5.webp', altText: "React Bits Logo" },
+    { imgUrl: 'assets/images/vega.png', altText: "Sponsor Logo" },
+    { imgUrl: 'assets/images/vega.png', altText: "Sponsor Logo" },
+    { imgUrl: 'assets/images/vega.png', altText: "Sponsor Logo" },
+    { imgUrl: 'assets/images/vega.png', altText: "Sponsor Logo" },
+    { imgUrl: 'assets/images/vega.png', altText: "Sponsor Logo" },
   ];
 
 const Home = () => {
@@ -41,9 +46,7 @@ const Home = () => {
           data-aos-duration="2000"
           data-aos-delay="2000"
         >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ratione
-          consectetur deleniti sapiente ipsa repellendus facilis, eius porro ea
-          soluta.
+         Project ARES develops a high-performance rocket with subsystems for payload, propulsion, avionics, and structure, leveraging innovative technologies for mission success.
         </p>
 
         {/* Button container with ShinyText inside */}

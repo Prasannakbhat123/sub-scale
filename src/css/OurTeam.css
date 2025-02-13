@@ -45,7 +45,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    height: 340px; /* Fixed height for all cards */
+    height: 380px; /* Fixed height for all cards */
   }
   
   .custom-spotlight-card img {
@@ -67,14 +67,39 @@
   
   .custom-spotlight-card p {
     text-align: center;
-    font-size: 18px;
+    font-size: 15px;
     color: #c4c4c4;
     font-family: 'Poppins', sans-serif;
     margin-top: 10px !important;
+    margin-bottom: 0 !important;
   }
 
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .social-icons a {
+    color: white;
+    border-radius: 50%;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    transition: background-color 0.3s ease;
+  }
 
-
+  .social-icons a svg {
+    stroke-width: 1; /* Make the icon lines thinner */
+  }
+  
+  .social-icons a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
   
   /* Responsive adjustments */
   @media (max-width: 768px) {
@@ -90,4 +115,3 @@
       max-width: calc(100% - 20px);
     }
   }
-  
