@@ -22,20 +22,22 @@ const Subsystem = () => {
       rightText: 'Propulsion'
     },
     {
+      image: 'assets/images/Aero.png',
+      title: 'Aerodynamics',
+      subtitle: 'Rocket Motor Development and Testing',
+      bottomRightTitle: 'Rocket Motor',
+      bottomRightDescription: 'The Aerodynamics Subsystem ensures the rocket stays on course and operates efficiently. It includes CFD simulations to analyze aerodynamic forces and designs critical components like the nosecone and fins. The nosecone has a tangent ogive shape with a 3:1 fineness ratio, while four trapezoidal fins with a square cross-section and 3.2 mm thickness provide stability. This subsystem also manages the recovery system, using a single-bay dual event system with tender descenders.',
+      rightText: 'Aerodynamics',
+      subheading: 'Aerodynamic Design & Stability'
+    },
+    
+    {
       image: 'assets/images/Avionics.png',
       title: 'Avionics',
       subtitle: 'Building the Flight Computer',
       bottomRightTitle: 'Sensor Data Processing',
       bottomRightDescription: 'The avionics subsystem works on building the flight computer on the sounding rocket. It works on getting data from various sensors and processing and analysing it to detect apogee of the rocket and trigger parachute deployment. Apart from this we are working on implementing control systems through airbrakes, and live data telemetry.',
       rightText: 'Avionics'
-    },
-    {
-      image: 'assets/images/Structures.png',
-      title: 'Structures',
-      subtitle: 'Designing and Manufacturing the Airframe',
-      bottomRightTitle: 'Structural Integrity Analysis',
-      bottomRightDescription: 'The Structures subsystem is responsible for designing, analyzing, and manufacturing the entire airframe of the rocket. We conduct simulations on critical components like bulkheads to ensure structural integrity and performance. With a hands-on approach, we fabricate all structural parts, combining engineering precision with practical craftsmanship to build a reliable and efficient launch vehicle.',
-      rightText: 'Structures'
     },
   ];
 
@@ -67,7 +69,7 @@ const Subsystem = () => {
   const resetAutoSlideInterval = () => {
     if (intervalId) clearInterval(intervalId); // Clear the previous interval
 
-    const newIntervalId = setInterval(nextSlide, 10000); // Set a new interval to change slide every 10 seconds
+    const newIntervalId = setInterval(nextSlide, 5000); // Set a new interval to change slide every 5 seconds
     setIntervalId(newIntervalId); // Store the new interval ID
   };
 
@@ -152,7 +154,7 @@ const Subsystem = () => {
         </div>
 
         <div className="slanted-text">
-          Project Ares&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Team Ares
+          Project Ares&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Team Olympus
         </div>
 
         <div className="logo-bottom" data-aos="fade-up" data-aos-delay="2000">

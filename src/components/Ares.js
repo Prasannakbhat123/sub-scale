@@ -30,11 +30,11 @@ const Ares = () => {
   // Array of cards with different data
   const cardData = [
     {
-      image: "/assets/images/Rayquaza.jpg",
+      image: "/assets/images/Rayquaza.png",
       details: {
-        "Weight": "Value 1",
-        "Height": "Value 2",
-        "Key 3": "Value 3",
+        "Weight": "37.131 Kg",
+        "Height": "268 cm",
+        "Diameter": "13.6 cm",
       },
       heading: "Ares",
     },

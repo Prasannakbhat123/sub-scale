@@ -46,7 +46,7 @@ const Home = () => {
           data-aos-duration="2000"
           data-aos-delay="2000"
         >
-         Project ARES develops a high-performance rocket with subsystems for payload, propulsion, avionics, and structure, leveraging innovative technologies for mission success.
+         Introducing Ares, Project Olympus' first rocket, powered by a Student Researched N3340-P motor, designed to reach 10,000 feet, with a GFRP and Aluminum structure and CanSat payload, featuring airbrakes and a pitot tube for ascent control.
         </p>
 
         {/* Button container with ShinyText inside */}
