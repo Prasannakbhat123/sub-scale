@@ -264,7 +264,9 @@
     }
 
     .bottom-left-subtitle{
-        max-width: 90%;
+        max-width: 100%;
+        padding: 0 10px;
+        font-size: 20px;
     }
 
     .bottom-left-content{
@@ -282,19 +284,20 @@
     }
 
     .subs_image_container {
-        max-width: 100%;
+        max-width: 80vw;
     }
 
     .subs_image {
         height: 250px;
         width: auto;
         border-radius: 10px;
-        object-fit: cover;
+        object-fit: contain;
+        max-width: 60vw;
     }
 
     .bottom-right-box {
         position: absolute;
-        bottom: -20%;
+        bottom: -25%;
         right: 11%;
         background: rgba(255, 255, 255, 0.298);
         border-radius: 15px;

@@ -114,4 +114,8 @@
       flex: 1 1 calc(100% - 20px); /* 1 card per row */
       max-width: calc(100% - 20px);
     }
+
+    .card-container{
+      gap: 0;
+    }
   }

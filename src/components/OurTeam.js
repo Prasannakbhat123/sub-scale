@@ -9,15 +9,15 @@ import { Mail, LinkedinIcon, Github } from 'lucide-react'; // Import Lucide icon
 import aayushImg from '../assets/images/team/Aayush Sinha.jpg';
 import adiImg from '../assets/images/team/Adi.jpg';
 import anushkaImg from '../assets/images/team/Anushka Prabhutendolkar.jpg';
-import avnishImg from '../assets/images/team/Avnish Kaur.jpeg';
+import avnishImg from '../assets/images/team/Avnish Kaur.jpg';
 import dhruvImg from '../assets/images/team/dhruv - Dhruv Jadhav.jpg';
 import prasannaImg from '../assets/images/team/Prasanna.jpg';
 import samrudhImg from '../assets/images/team/Samrudh Raja.jpg';
 import sanskrutiImg from '../assets/images/team/Sanskruti Ginde.jpg';
-import shawnImg from '../assets/images/team/Shawn Chris.jpeg';
+import shawnImg from '../assets/images/team/Shawn Chris.jpg';
 import shubhImg from '../assets/images/team/Shubhendu Arya.jpg';
 import varunImg from '../assets/images/team/varunpv.jpg';
-import vedantImg from '../assets/images/team/Vedant Totla.jpeg';
+import vedantImg from '../assets/images/team/Vedant Totla.jpg';
 
 const teamMembers = [
   { name: "Aayush Sinha", subsystem: "Management", image: aayushImg, email: "sinha.aayush.aayush@gmail.com", linkedin: "https://www.linkedin.com/in/aayush-sinha-64a631202?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", github: null },
