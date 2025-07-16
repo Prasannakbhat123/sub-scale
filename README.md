@@ -55,12 +55,6 @@ npm run build
 
 Project ARES is developed by Team Olympus, a multidisciplinary group of students working under the thrustMIT student project, passionate about aerospace engineering. Visit the [Team](https://project-ares-eight.vercel.app/team) page for details and contact information.
 
-## Contact
-
-- **Email:** contact@projectares.com
-- **Phone:** 9384018427
-- Use the contact form on the website for direct inquiries.
-
 ## License
 
 This project is for educational and research purposes.
