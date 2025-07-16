@@ -4,6 +4,7 @@ import ShinyText from './ShinyText';
 import About from './About';
 import Subsystem from './Subsystem';
 import LogoWall from "./LogoWall";
+import { Link, useNavigate } from 'react-router-dom'; 
 const logoImgs = [
     // { imgUrl: 'assets/images/logo1.webp', altText: "React Bits Logo" },
     // { imgUrl: 'assets/images/logo2.webp', altText: "React Bits Logo" },
@@ -18,6 +19,25 @@ const logoImgs = [
   ];
 
 const Home = () => {
+  const navigate = useNavigate();
+  const handleNavigation = (path, hash) => {
+    if (window.location.pathname !== path) {
+      navigate(path);
+      setTimeout(() => {
+        if (hash) {
+          document.getElementById(hash.substring(1)).scrollIntoView({ behavior: 'smooth' });
+        } else {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      if (hash) {
+        document.getElementById(hash.substring(1)).scrollIntoView({ behavior: 'smooth' });
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+  };
   return (
     <>
       <div className="home-container">
@@ -56,12 +76,15 @@ const Home = () => {
           data-aos-duration="2000"
           data-aos-delay="3000"
         >
+          <li><Link to="/ares" onClick={() => handleNavigation('/ares')}>
           <ShinyText
             text="Know More >"
             disabled={false}
             speed={3}
             className="custom-class"
           />
+          </Link>
+        </li>
         </div>
       </div>
 
